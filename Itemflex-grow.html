@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex-grow</title>
+    <style>
+    *{
+        margin: 0;
+    }
+    .container{
+        max-width:500px;/*  ekranı küçültüğümüzde daralma olsun diye max-width giriyoruz */
+        border: 1px solid #c3c3c3;
+        display: flex;
+        box-sizing: border-box;
+    }
+    .kutu{
+        text-align: center;
+        padding: 70px 0;
+        width: 200px;
+        font-size: 18px;
+    }
+    .kutu1 {
+        background: #ff6769;
+        /* flex-grow: 1;
+        flex-shrink: 1; */
+        flex-basis: 200px;
+    } 
+    .kutu2{
+        background: #a474f1;
+        /* flex-grow: 1;
+        flex-shrink: 5; */
+        flex-basis: 200px;
+        align-self: flex-start; /* sadece bu kutunun containerin üst tarafta olmasını sağladık sağladı */
+        /* yani bu özellik align-items in sadece bu kutuya uygulamak için  */
+    }
+
+    .kutu3{
+        background: #6eff76;
+        /* flex-grow: 4;
+        flex-shrink: 0; */
+        flex-basis: 200px;
+        flex:1 1 200px; /* aşşağıdaki özelliklerin hepsini tek satırda girebilmemize yarar */
+        /* flex: flex-grow flex-shrink flex-basis; */
+    }
+ /* flex grow özelliği aynı container içinde bulunan kutuların birbirine göre
+ olan boyutlarını ayarlar */
+ /* flex-shrink özelliği ekran küçülünce daralma oranlarını belirlediğimiz özelliktir */
+ /* flex-basis bir kutunun bulunduğu container e göre max genişliğini vermeye yarar
+ ((sor!!!))  */
+    </style>
+    
+</head>
+<body>
+<div class="container">
+    <div class="kutu kutu1"></div>
+    <div class="kutu kutu2"></div>
+    <div class="kutu kutu3"></div>
+    <!-- bir html tagında birden fazla sınıf tanımlanabileceğini gördük -->
+</div>
+</body>
+</html>

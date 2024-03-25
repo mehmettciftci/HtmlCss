@@ -1,0 +1,411 @@
+@charset "utf-8";
+/* CSS Document */
+
+		@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+
+	body{
+		background: #f5f5f5;
+		font-family: 'Crimson Text', serif;
+		color: #18314F;
+	}
+	.baslik{
+		font-size: 26px; 
+	}
+	h1{text-align: center;
+	letter-spacing: 4px;
+	color: #18314F;
+		font-weight: 400;
+
+	}
+
+	section{
+		width:800px;
+		height: 500px;
+		background: #FFFFFF;
+		border: 1px solid black;
+		margin: 20px auto;
+		box-shadow: 0 0 20px rgba(0,0,0,.25);
+		padding: 10px;
+
+	}
+	h2 {
+		font-weight: 400;
+		font-size: 1rem;
+		margin-bottom: 3em;
+		letter-spacing: 8px;
+		text-align: center;
+		color: #8BBEB2;
+}
+	
+	h2::after {
+	  content: '';
+	  display: block;
+	  border-bottom: 1px solid rgba(24,49,79,.3);
+	  width: 20%;
+	  margin: 20px auto 0;
+}
+
+	p{
+		color: #18314F;
+		font-size: 18px;
+		letter-spacing: 3px;
+		margin: 5px;
+}
+
+.kutular{
+width: 80px;
+padding: 30px 0;
+border: 1px solid rgba(0,0,0,1.00);
+float: left;
+margin: 10px;
+text-align: center;
+font-size: 18px;
+font-weight: 500;
+}
+
+/*********************** 1- Evrensel Seçici( * )**************************/
+ /*  *{background: blue;}  sayfamızdaki bütün öğeleri ortak bir şekilde biçimlendirmek istersek
+						bu karakteri kullanırız  */
+
+
+
+
+
+
+
+
+/******************* 2- Class Seçici(Sınıf Seçici .etiket)*******************/
+
+.kırmızı{color: red;}
+.italik{font-style: italik;}
+
+/* p tagı içinde class diyip isim vererek ordaki paragrafı burda . diyip
+ismini yazarak biçimlendirebiliyoruz ve bir class içinde boşluk bırakıp 
+birden fazla sınıf ismi verebiliyoruz */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************ 3- Id Seçici (Kimlik Seçici #etiket)****************/
+
+#paragraf{font-size: 25px;
+color: gray;}
+
+/* genelde javascriptte kullanırız css te çok kullanmayız */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** 4- Etiket Seçici (a, div, p)****************************/
+
+
+hr{width: 700px; height: 3px; background-color: rebeccapurple;}
+
+/* p{color: red;}
+a{color: red;} */
+p,a{color: blue;}
+
+
+/* etiketleri direk isimlerini yazarakta biçimlendirebiliriz hangi etiketi seçersek 
+o etiketin bulunduğu tüm yerleri biçimlendirir */
+
+
+
+
+
+
+
+
+
+
+
+/********************** 5- Çoklu Seçiciler(X,Y,Z) *****************************/
+
+.baslik, .icerik{ color: #18314F;}
+
+/* etiket veya sınıfları sıralı şekilde aralarına virgül koyup yazarak biçimledirebiliriz */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************* 6- İç Nesne Seçiciler (Torun Seçiciler X Y)*****************************/
+
+/* menülerimizi kullanırken çok kulllanıyoruz özellikle liste yapılardında da kullanıyoruz
+sadece iç nesnelerin etkilenmesini ve diğer paragraftakiler tag vs etkilenmemesini
+istediğimizde kullanırız section a bir class tanımlayarak yapıyoruz*/
+.torun a{color: brown;}
+.torun p{color: rgb(243, 10, 10);}
+
+
+
+
+
+
+
+
+
+
+
+/********************* 7- Yanyana Seçiciler(X+Y)*****************************/
+
+.yanyana h3+p{color: #FB8B8D;}
+
+/* yanyana seçicilerde bir etiketten sonra gelen etiketi seçebilmek için kullanırız 
+sectiona verilen adı yazıp seçmek istediğimiz etikete kadar yazıp araya + koyarak ilerleriz*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************* 8- Çocuk Seçiciler(X>Y) *****************************/
+
+.cocuk >p{font-size: 20px; color: #147a63; display: block;
+	border: 1px solid #f30f13}
+
+/* sectionun içindeki paragrafların strong içindeki paragrafları etkilemeden 
+diğer pargrafları biçimlendirmek için seçmemimizi sağlar */
+
+
+
+
+
+
+
+
+
+/********************* 9- Bitişik Seçiciler(X~Y) *****************************/
+
+.bitisik ul~p{
+	color:white;background-color: blueviolet;
+}
+/* seçtiğimiz referanstan sonra gelen tagı seçmek için kullanırız */
+
+
+
+
+
+
+
+
+
+/********************* 10- Nitelik Seçici(X[Y]) *****************************/
+
+
+.nitelik a[href^='https']{text-decoration: none;}
+.nitelik a[href$='yandex.com']{color: #ff0004;}
+.nitelik input[type='text']{background: #18314F;
+height: 25px;}
+.nitelik input[value*='io2']{transform: scale(2);} /*transform: scale(2) karakterin iki katı kadar büyümesini sağlar */
+.nitelik input[value~='Button']{background: #b96869;}
+
+
+/* nitelikleride seçmek istediğimizi ayırmak için kullanırız ^ işaretini de
+kullanrak niteliklerin isimlerinin hreflerini başlangıçtan başlayarak farklı kısımlarını kullanarak
+ayırır $ işareti ise hrefin sonda nasıl bittiğini ayırır * karakteri ise içinde bulunan herhangi bir ifade olanı
+seçer ~ ise içinde geçen herhangi bir kelime için yazılır*/
+
+
+
+
+
+
+
+
+/*********-11- Nitelik Seçici(X[Nitelik='Değer'] *, $, ^, ~ ) *************/
+
+.nitelikicerik a[href^="mailto"]::before{
+content:'';
+width: 25px;
+height: 25px;
+background: url(mail.jpg) no-repeat;
+display: block;
+background-size: cover;
+float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************12- X::first-letter ve X::first-line *****************/
+
+
+ .ilk p::first-letter{font-size: 40px;} /*ilk harfi değiştirmeye yarar */
+ .ilk p::first-line{color: red;} /*ilk satırı değiştirmeye yarar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************13- X::before ve X::after **************************/
+
+  /*.oncesonra p::before{
+	content: '';
+	background: url(küçük\ simge.jpg) no-repeat;
+	width: 75px;
+	height: 75px;
+	display: block; bir kutunun oluşmasını sağlamış olduk 
+	float: left; sola hizalı bir şekilde gelmesini sağlamış oluruz
+	background-size: cover; resmin içinde bulunduğu nesnenin boyutlarını almış olmasını sağlarız
+    }  */
+.oncesonra p::after{
+	 content: ''; /*içerik olarak boş bırakmak için kullanılır  */
+	background: url(küçük\ simge.jpg) no-repeat;
+	width: 75px;
+	height: 75px;
+	display: block; /*bir kutunun oluşmasını sağlamış olduk  */
+	float: right; /*sağa hizalı bir şekilde gelmesini sağlamış oluruz */
+	background-size: cover;
+	 position: relative; /*top left değerini belirleyebilmek için kullandık */
+	 top: -25px;
+	}
+
+/* bir nesneden önce ya da bir nesneden sonra nesne eklemek için kullanılır*/
+
+
+
+
+
+
+
+
+
+
+/*************************14- Nth(n'inci)-child  ***********************/
+
+ .kutu .kutular:nth-child(3){ /* n. elemanı seç demek*/
+	background: #FB8B8D;
+}
+
+/* 2n dersek iki ve katlarını seçer n+5 dersek 5. elemandan sonrasını seç demek 
+-n+5 ise 5 elemandan sonrasını seç demek an+b ise 5 b den itaberen a kadar atlayarak
+seç demek odd seçeneği tek sayıları even dersek te çift sayıları seçmiş oluyoruz 
+nth-last-child dersek sondan eleman değeri vererek seçmiş oluruz */
+
+
+
+
+/************************15- Tablo biçimlendirme  *****************************/
+
+.tablo tr:nth-child(even){
+	background: gray;
+}
+
+
+
+
+
+
+/************************16- Sözde sınıflar(Pseudo) ******************************/
+
+.Pseudo a:link{
+	
+	color: #a1db19;
+}
+/* daha önce ziyaret edilmemiş linklerin rengini belirliyoruz */
+
+.Pseudo a:hover{
+	text-decoration: none;
+	color: #33084d;
+}
+/* hover mouse ile üzerine geldiğimizde değişme özelliğini verir */
+/* .Pseudo input:hover{background: #f30f13;}  */
+/* bu background info istenen kutunun rengini değiştiryor */
+
+.Pseudo a:visited{
+	color: #099b5e;
+}
+/* önceden ziyaret edilmiş linkleri belirtiğimiz renkte gösterir */
+
+.Pseudo input[name="yas"]:focus{
+	background: #a1db19;
+}
+/* info girilmesi gerekilen yere tıkladığımızda rengini belirtmek için kullanıyoruz */
+
+.Pseudo input:checked{
+	width: 20px;
+	height: 20px;
+}
+/* seçilen özelliğin değismesi için kullanılır */
+
+.Pseudo input[type="text"]:disabled{
+	background: #147a63;
+}
+/* disabled olanları seçip biçimlendirmeyi bu şekilde yapabiliyoruz */
+
+.Pseudo input[type="text"]:enabled{
+	background: green;
+}
+/* enabled olanları seçip biçimlendirmeyi bu şekilde yapabiliyoruz */
+
+.Pseudo input[type="number"]:out-of-range{
+background: red; border: 1px solid gray;
+box-shadow: 0 0 5px 5px;
+
+}
+
+
+/* geçerli bir değer girmezsek orayı göstermek için üsteki şekilde 
+yaparız */
+
+.Pseudo input[type="number"]:in-range{
+	background: #FB8B8D;
+}
+/* geçerli bir değer girdiğimizde biçimlendirebilmek için bu komutu kullanırız */
+

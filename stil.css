@@ -1,0 +1,382 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Font Awesome 5 Brands';
+}
+header.ust{
+    background: url(overlay.jpg),url(banner.jpg);
+    position: relative; /* top right bottom değerlerini kullanbilmek için relative diyoruz */
+    background-size: cover;  /*resimlerin ekranı tam anlamıyla kapalaması için  */
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header h1{
+    position: relative;
+    font-size: 18px;
+    margin-left: 30px;
+    top: 50px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase; /*yazıların büyük olmasını sağladık */
+    font-family: 'Raleway', sans-serif;
+}
+header strong{
+    font-weight: 700;
+}
+header a{
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+header ul{
+    list-style: none;
+    position: relative;
+    float: right;
+    right: 20px;
+    top:0;
+}
+/* li etiketlerini de biçimlendirerek menüleri yan yana alıyoruz */
+header ul li{
+    display: block; /*  yan yana gelmelerini istediğimiz için blok yaptık */
+    padding: 30px; /*iç boşluk yaparak aralarında boşluk bıraktık */
+    float: left;
+
+}
+header ul li a{
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'Font Awesome 5 Brands';
+    text-transform: uppercase;
+    color: #d8d8d8;
+    transition: .2;   /* hover özelliğinin süresini belirledik */
+}
+header ul li a:hover{
+    color: white;
+
+}
+header #banner{ /* id olduğu için # i kullandık */
+    width: 100%;
+    position: absolute; /*istediğimiz yere konumlandırabilmek için kullandık */
+    top: 40%;
+    text-align: center;
+}
+
+#banner h2{
+    font-size: 40px;
+    color: aliceblue;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px; /*altına boşluk bırakmak için verdik*/
+
+}
+#banner p{
+    color:#aaa;
+    font-size: 22px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    line-height: 40px; /*satırların arasına verdiğimiz boşluk */
+    font-weight: 100;/*  yazı kalınlığı */
+    letter-spacing: 2px;/*  harflerin arasına boşluk değeri atadık*/
+
+}
+#banner a{
+    padding: 25px 35px; /*sağdan soldan boşluk bırakarak kutu haline getirdik */
+    background-color: #f32853;
+    text-transform: uppercase;
+    font-size: 20;
+    border-radius: 5px;/*  kutunun kenarlarına ovalik vermek için kullandık */
+}
+#bolum2{
+   width: 1000px;  /* sayfayı tam kaplamaması için width değerini verdik */
+   margin: 0 auto;  /* sayfanın ortalanması için bu değerleri verdik (dış boşluk) */
+   padding: 50px 0; /*  iç boşluk üstten altan 50px boşluk verdik sağdan soldan 0 verdik */
+
+}
+.kapsayici{
+    width: 1000px;
+    margin: 0 auto;
+}
+#bolum2 .kapsayici.sol{
+    width: 400px;
+    float: left;
+    padding-left: 70px; /* soldan boşluk kalması için verdik */
+
+}
+#bolum2 h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 700; /* kalınlık */
+    color: #484848;
+    line-height: 60px; /* satırlar arası açıklık */
+    margin-left: -100px;
+
+}
+#bolum2 .sol p{
+    font-family: 'Raleway', sans-serif;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 100;
+    color: #aaa;
+    line-height: 40px;
+    margin-left: -100px;
+}
+#bolum2 .sag{
+    width: 500px;
+    float: right;
+    padding-right: 0px;
+    margin-left: 50px;
+
+}
+#bolum2 .sag p{
+    line-height: 30px;
+    color: #666;
+    margin-bottom: 20px;
+    margin-top: -350px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-left: 150px;
+}
+.temizle{
+   clear: both;  /* resimlerin sayfasını üsteki sayfadan ayırmak için bu kodu verdik */
+}
+
+#bolum3{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    background: #f6f6f6;
+    text-align: center;
+}
+#bolum3 h2{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #484848;
+}
+#bolum3 p{
+    margin: 40px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #111;
+}
+#bolum3 .resim{
+    width: 500px;
+    float: left;
+    background: #fff;
+    margin: 50px 20px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px #ccc; /* kutunun kenar gölgelendirmesi */
+}
+
+#bolum3 img{
+    width: 400px;
+    margin: 0;
+    position: relative;
+}
+#bolum3 .kapsayici2{
+    width: 1100px;
+    margin: 0 auto;
+}
+#bolum3 ul{
+    list-style: none;
+}
+#bolum3 ul li{
+    display: inline-block;
+}
+#bolum3 ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 20px 50px;
+    background: #f32853;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#bolum3 ul li:nth-child(2) a{
+    background: #323037;
+}
+#bolum4{
+    width: 100%;/* bölüm 4 sayfamızın ekranının tamamını kaplaması için veriyoruz */
+    padding-top: 50px;/*  üst taraftan içboşluk verdik */
+}
+#bolum4 h2{
+    margin-left: 50px; /* ekranın soluna yapışmaması için verdik */
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #484848;
+    margin-bottom: 30px;/*  altındaki p tagıyla boşluk kalması için verdik */
+}
+#bolum4 h2+p{ /* h2 den sonra gelen ilk p tagımızı seçtik */
+    font-size: 18px;
+    color: #666;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+#bolum4 .bolumler{
+    width: 460px;
+    float: left;
+    margin-bottom: 50px; /*kendinden sonra gelecek nesneler arasında boşluk olması için verdik */
+    margin-right: 20px; /*sağından gelecek nesneler için boşluk verdik */
+
+}
+#bolum4 .bolumler .kucukresim{
+    float: right;
+    width: 130px;
+    margin: 10px;/*  yazılarla yakınlaşmasın diye ekledik */
+}
+#bolum4 .bolumler .kucukresim img{
+    border: 5px solid #b0b0b0; /* kenarlık */
+    border-radius: 100%;/*  yuvarlak hale gelmesini sağladık */
+    width: 130px;
+}
+#bolum4 .bolumler .metin{
+    float: left;
+    width: 290px;
+    text-align: right;
+    padding: 10px;/*  dışarı doğru taşma büyüme olur */
+    line-height: 25px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+
+}
+#bolum4 .bolumler h3{
+    text-align: right;
+    font-size: 18px;
+    color: #484848;
+    margin-bottom: 10px;
+}
+#bolum4 .bolumler .metin h3+p{
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+#bolum4 .bolumler:nth-child(2n) .metin { /* iki ve katlarını seçtik */
+    text-align: left;
+
+}
+#bolum4 .bolumler:nth-child(2n) .metin h3 { /* iki ve katlarını seçtik */
+    text-align: left;
+
+}
+#bolum4 .bolumler:nth-child(2n) .kucukresim { /* iki ve katlarını seçtik */
+    float: left;
+}
+#bolum4 .bolumler .metin p:nth-child(3){
+    color: #666;
+    font-size: 13px;
+}
+#bolum5{
+    width: 100%;
+    height: 350px;
+    background: url(overlay.jpg),url(banner.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+#bolum5 .icerik{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translatey(-50%);
+    text-align: center;
+}
+#bolum5 .icerik h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+}
+#bolum5 .icerik p{
+    color: #aaa;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+#bolum5 .icerik a{
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;/*  satır içi blok gözükmesi için verdik */
+    padding: 20px 35px;/*  iç boşluk vererek  buton haline getiriyoruz */
+    background: #f32853;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+#bolum5 .icerik a:hover{
+    background:  crimson;
+}
+footer{
+    width: 100%;
+    height: 350px;
+    text-align: center;
+}
+footer .sosyal{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+footer a{
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+footer a[title="facebook"]::before{
+    content: "";
+    background: url(facebook.png) no-repeat;
+    width: 45px;
+    height: 42px;
+    display: inline-block;
+
+}
+footer a[title="twitter"]::before{
+    content: "";
+    background: url(twitter.png) no-repeat;
+    width: 45px;
+    height: 42px;
+    display: inline-block;
+
+}
+footer a[title="linkedin"]::before{
+    content: "";
+    background: url(linkedin.png) no-repeat;
+    width: 45px;
+    height: 42px;
+    display: inline-block;
+
+}
+footer ul{
+    list-style: none;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+footer ul li{
+    display: inline-block;
+    padding: 2px 25px;
+}
+footer ul li p{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: darkgray;
+    
+}
+footer ul li:nth-child(-n+2){
+    border-right: 2px solid #b4b1b1;
+}
+
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>justify-content</title>
+    <style>
+        .container{
+            display: flex;
+            height: 400px;
+            flex-direction:row-reverse ; /* esnek kutuların sıralama yönünü belirler*/
+            /* row reverse dediğimiz zaman tersten sıralar */
+            /* column dersek yukardan aşağıya doğru ardaşık olarak sıralar */
+            /* column-reverse dersekte yukardan aşağıya ters sıralar */
+
+
+
+            align-items: center;
+            /* strech dediğimizde ekranın tamamını kaplayacak uzunlukta kutular sıralanır */
+            /* nesnelerin dikeyde hizalanmasını sağlar */
+            /* yanyana dizeceğimiz kutuların boyutlarını eşit yapmak için kullanırız */
+            /* center dediğimizde ise nesneler dikeyde ekranın ortasında toplanır */
+            /* flex-start dediğimizde ise ekranın üst tarafında toplanır */
+            /* flex-end dediğimizde ekranın alt tarafında toplanır */
+
+
+            justify-content: space-between;
+            /* justify-content içindeki elemanları yatayda hizalamaya yarar */
+            /*  flex start dediğimiz de ekranın sol tarafına nesneler sırlandı */
+            /* flex-end dersek ekranın sağ tarafına sıralanır center dersek ortaya gelecektir */
+            /* space-between dersek iki yana hizala demiş oluyoruz */
+
+
+            /* justify-content align-itemsin her ikisinide aynı anda kullanıp kutuları ekranın tam ortasına getirebiliriz */
+
+            flex-wrap: wrap;/* nowrapla kutuların alt satıra geçip geçmeyeceğini belirleriz  */
+            /* nowrap dediğimizde genişlik yani width değeri girmemize rağmen altsatıra geçmez */
+            /* wrap dediğimizde ise sığmadığı durumlarda altsatıra geçer */
+            /* wrap-reverse dediğimizde ise altan yukarıya doğru kayar kutular */
+
+
+            /* flex-flow özeliği flex-direction ve flex-wrap kısayoludur */
+            /* align-content iki veya daha fazla satır oluması durumunda hizalamak için kullanılır */
+            align-content: center;/*  dediğimizde kutuları tam ekranın ortasında toplar */
+            /* ve ekranı küçültüğümüzde ise dikey olarak ekranın */
+            /* strech dediğimizde ise ekranı uzunluk olrak doldurarak sıralar ekranı küçültüğümüzde de konteyner alt satıra geçerek
+            sıralanır */
+            /* flex-start dediğimizde sol üst taraftan hizalanmaya başlar sığdığı zaman tek satıra sıralanır sığmadığında alt satıra iner */
+            /* flex-end dersek sol alt taraftan sıralanır ve dikeyde hizalanır*/
+            /* space-between dediğimizde ise sayfanın en alt tarafına inerek hizalancaktır */
+            /* space araund ise üstten alta doğru eşit boşluklar bırakarak sıralanacaktır */
+
+
+
+
+            background-color: #4644ff;
+        }
+        .kutu{
+            background-color: #f1f1f1;
+            width: 100px;
+            text-align: center;
+            line-height: 75px;
+            margin: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="kutu" style="order: 3;">1</div> <!-- yaparak kutunun sıralamasını belirleyebiliriz -->
+        <div class="kutu">2</div>
+        <div class="kutu">3</div>
+        <div class="kutu">4</div>
+        <div class="kutu">5</div>
+    </div>
+</body>
+</html>

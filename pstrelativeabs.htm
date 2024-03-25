@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position Sınıfı Relative Ve Absolute</title>
+    <style>
+        .kapsayici{
+            width: 800px;
+            height: 250px;
+            background-color:rgb(28, 70, 148);
+            position: relative;
+        }
+        .kutu{
+            width: 180px;
+            height: 150px;
+            margin: 10px;
+            background-color: black;
+            float: left;
+        }
+        .abskutu{
+            width: 150px;
+            height: 50px;
+            background-color: gray;
+            top: 100px;
+            left: 300px;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+    <div class="kapsayici">
+       <div class="kutu"></div>
+       <div class="kutu"></div>
+       <div class="kutu"></div>
+       <div class="kutu"></div>
+       <div class="abskutu"></div>
+   </div> 
+   <div class="kapsayici">
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="kutu"></div>
+    <div class="abskutu"></div>
+</div> 
+</body>
+</html>

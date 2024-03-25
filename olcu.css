@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;
+padding: 0;
+}
+body{font-size: 32px;}/*  1 em  16 px den 32 px e çıktı */
+html{font-size: 20px;}
+h3{
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 26px;
+}
+.kutu{
+	width: 600px;
+	padding: 10px;
+	background: #D3DBFF;
+	margin: 10px auto;
+}
+.kutu:nth-child(1) p{
+	font-size: 16px;
+}
+.kutu:nth-child(2) p{
+	font-size: 16px;
+}
+.kutu:nth-child(3) p{/* 16 px i kaldırsakta bişey değişmiyecektir çünkü varsayılan 16 pxdir */
+	font-size:16px;
+}
+.kutu:nth-child(4) p{/* yazının px ini iki katına çıkardığımızda ise büyüyecektir */
+	font-size: 32px;
+}
+.kutu:nth-child(5) p{/*  em ölçü birimi body tagından tanımlanmış olan font size dan referans alır */
+	font-size: 2em;
+}
+.kutu:nth-child(6) p{/* html tagına tanımlanmış font size dan referans alır */
+	font-size: 1.3rem;
+}
+.kutu:nth-child(7) p{/*yüzde ölçü birimi de body tagından tanımlanmış olan font size dan referans alır */
+	font-size: 100%
+}
+.kutu:nth-child(7){
+	width: 100%; /* bu padding değeri dışarı doğru genişlemesini sağlıyor bu yüzden kutu sayfadan büyük olup taşabiliyor */
+	box-sizing: border-box;/*  boşluğun içeri doğru olmasını sağladık 
+	yüzde ölçü biriminde sayfamızı daraltığımızda kutu yazılar daralır ve küçülür*/
+}
+.kutu:nth-child(8) p{
+	font-size: 12pt;
+}
+.kutu:nth-child(9) p{
+	font-size: 4mm;
+}
+.kutu:nth-child(10) p{
+	font-size: 0.5cm;
+}
+.kutu:nth-child(11){
+	font-size: 0.5cm;
+	height: 100vh;
+	width: 100vw; /*width değerini 100% yaparak ta kaydırma çubuğunu sayfamızda göstermeyebiliriz
+	 ya da vw değerini 98 yapabiliriz */
+	max-width: 100%;/*  yaparakta kaydırma çubuğunu yok edebiliriz */
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.kutu:nth-child(11) p{
+	font-size: 2vw;/*  yazımızı böyle biçimlendirdiğimizde ise ekranı küçültükçe yazı da aynı oranda
+	küçülür */
+	font-size: 2vh; /*dediğimizde ise ekranın yüksekliğini baz alacağı için ekranın yüksekliğini değiştirdiğimizde
+	aynı oranda yazımızda küçülür */
+	font-size: 2vmax;/*  yaptığmızda ise yükseklik olarak yazıya en büyük boyutu veririr ve
+	yükseklik olarak yazıyı değiştirdiğimizde sadece yazı boyutu değişir */
+}
+

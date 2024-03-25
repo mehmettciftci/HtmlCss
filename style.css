@@ -1,0 +1,7 @@
+#aciklamaId{
+    text-transform: lowercase;
+    color: coral;
+    border:2px darkorchid dashed;
+    border-radius: 0.3px;
+    box-shadow: darkslategray;
+}
